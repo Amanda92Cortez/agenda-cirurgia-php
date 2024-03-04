@@ -1,0 +1,21 @@
+.texto-menor{
+  font-size: 13px;
+}
+
+.texto-verde:hover {
+  background: #4dc841;
+  color: black;
+}
+
+td{
+  border-radius: 1px solid red;
+}
+
+.reservado {
+  background-color: red; /* ou a cor desejada */
+  color: red;
+}
+
+.livre {
+  color: white;
+}

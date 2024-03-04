@@ -15,8 +15,8 @@ As técnicas e tecnologias utilizadas pra isso são:
 ![CSS](https://img.shields.io/badge/CSS-1283e0?&style=for-the-badge&logo=css3&logoColor=white)
 
 ## 🎯 Desafio
-Tela de detalhes
-![Agenda-de-Cirurgia](https://github.com/Amanda92Cortez/agenda-cirurgia-php/assets/19363871/dce35b51-5708-43a8-8079-9b12542f6ec7)
+![Gravar_2024_03_04_16_24_54_44](https://github.com/Amanda92Cortez/agenda-cirurgia-php/assets/19363871/046c9960-ab3b-46a8-96c0-282dea8e894d)
+
 
 ## 🛠️ Abrir e rodar o projeto
 Baixar projeto:

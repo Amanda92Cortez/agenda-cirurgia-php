@@ -51,9 +51,24 @@
     ></script>
 
     <script>
-      function carregarDados() {
-        var dataFiltro = document.getElementById("dataFiltro").value;
 
+	const today = new Date();
+      	const data = today.toISOString();
+	const data_atual = data.substring(0, 10);
+	var dataFiltro = document.getElementById("dataFiltro").value;
+
+	if(dataFiltro.length == 0){
+		document.getElementById("dataFiltro").value = data_atual;
+		carregarDados(data_atual);
+	}
+
+      function carregarDados(data_atual) {
+	if(data_atual === undefined){
+		dataFiltro = document.getElementById("dataFiltro").value;
+	}else{
+		dataFiltro = data_atual;
+	}
+	
         // Faz uma requisiÃ§Ã£o Ajax para o script PHP com o filtro de data
         $.ajax({
           url: "db_config.php",
@@ -82,8 +97,8 @@
             // Adiciona os dados Ã  tabela
             $.each(data, function (index, row) {
               $("#tabelaDados").append(
-		            '<tr class="' + 'border border-black p-2 mb-2 text-center">' +                   
-	                '<td>' + row.HR_INICIO +'</td>' + 
+		'<tr class="' + 'border border-black p-2 mb-2 text-center">' +                   
+	          '<td>' + row.HR_INICIO +'</td>' + 
                   '<td class="' + (row.HEMO === "RESERVADO" ? "reservado" : "livre") + ' border">' + row.HEMO + '</td>'+ 
                   '<td class="' + (row.SALA_01 === "RESERVADO" ? "reservado" : "livre") + ' border">' + row.SALA_01 + '</td>'+ 
                   '<td class="' + (row.SALA_02 === "RESERVADO" ? "reservado" : "livre") + ' border">' + row.SALA_02 + '</td>'+ 
